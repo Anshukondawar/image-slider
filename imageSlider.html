@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+    <div class="container">
+
+        <div class="slide">
+
+            <div class="item" style="background-image: url(img1.jpg);">
+                <div class="content">
+                    <div class="name">Japan</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates a dolorum.</div>
+                    <button>see more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img2.jpg);">
+                    <div class="content">
+                        <div class="name">California</div>
+                        <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates a dolorum.</div>
+                        <button>see more</button>
+                    </div>
+             </div>
+            <div class="item" style="background-image: url(img3.jpg);">
+                        <div class="content">
+                            <div class="name">India</div>
+                            <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates a dolorum.</div>
+                            <button>see more</button>
+                        </div>
+            </div>
+             <div class="item" style="background-image: url(img4.jpg);">
+                            <div class="content">
+                                <div class="name">Australia</div>
+                                <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates a dolorum.</div>
+                                <button>see more</button>
+                            </div>
+            </div>
+            <div class="item" style="background-image: url(img5.jpg);">
+                                <div class="content">
+                                    <div class="name">Switzerland</div>
+                                    <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates a dolorum.</div>
+                                    <button>see more</button>
+                                </div>
+            </div>
+
+            </div>
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        </div>
+    </div>
+    <script>
+        let next=document.querySelector(".next")
+        let prev=document.querySelector(".prev")
+        next.addEventListener('click',function(){
+            let item=document.querySelectorAll('.item')
+            document.querySelector('.slide').appendChild(item[0])
+
+        })
+        prev.addEventListener('click',function(){
+            let item=document.querySelectorAll('.item')
+            document.querySelector('.slide').prepend(item[item.length-1])
+
+        })
+    </script>
+</body>
+</html>
